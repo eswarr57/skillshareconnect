@@ -1,0 +1,73 @@
+/* /frontend/src/pages/PostTaskPage.css */
+
+.post-task-page {
+    /* Ensures the form container is centered and readable */
+    max-width: 800px; 
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.post-task-page h2 {
+    color: #3f51b5; /* Primary color */
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ff9800; /* Accent color underline */
+    padding-bottom: 10px;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Specific styling for inputs/selects in this form */
+.task-form input[type="text"],
+.task-form input[type="date"],
+.task-form input[type="number"],
+.task-form textarea,
+.task-form select {
+    /* Inherits most styles from App.css, just ensuring padding and width */
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+}
+
+/* Overriding default line height for textareas */
+.task-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Styling for the inline group (Due Date and Estimated Time) */
+.form-group-inline {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px; /* Ensures space below the inline group */
+}
+
+.form-group-inline .form-group {
+    flex: 1;
+    min-width: 0; /* Allows inputs to shrink correctly */
+}
+
+.btn-block {
+    margin-top: 25px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+}
+
+/* Styles for the unauthenticated message */
+.error-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #c0392b;
+    padding: 40px;
+    border: 2px dashed #c0392b;
+    background-color: #fce4e4;
+    border-radius: 8px;
+    margin-top: 50px;
+}

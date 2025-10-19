@@ -1,0 +1,76 @@
+/* /frontend/src/pages/TaskDetailPage.css */
+
+.task-detail-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.task-header h1 {
+    color: #3f51b5;
+    margin: 0;
+}
+
+.task-details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Main content | Sidebar */
+    gap: 30px;
+}
+
+.task-main-content h3, .task-sidebar h3 {
+    border-left: 4px solid #ff9800;
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.task-main-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-main-content ul li {
+    background: #f9f9f9;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.task-sidebar {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-info {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.assigned-message, .owner-message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.assigned-message {
+    background-color: #ffeb3b; /* Yellow */
+}
+
+.owner-message {
+    background-color: #a5d6a7; /* Green */
+}
