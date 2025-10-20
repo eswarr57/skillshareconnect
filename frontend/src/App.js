@@ -6,12 +6,13 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 
 // Components and Pages
 import Header from './components/Header';
-import HomePage from './pages/HomePage'; // Simple placeholder
+import HomePage from './pages/HomePage';
 import TaskListPage from './pages/TaskListPage';
-import TaskDetailPage from './pages/TaskDetailPage'; // To be created next
-import PostTaskPage from './pages/PostTaskPage'; // To be created next
+import TaskDetailPage from './pages/TaskDetailPage';
+import PostTaskPage from './pages/PostTaskPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import ProfilePage from './pages/ProfilePage'; // <-- 1. ADD THIS IMPORT
 
 // You will need a global stylesheet: /frontend/src/App.css (not provided here)
 import './App.css'; 
@@ -43,7 +44,17 @@ const AppContent = () => {
                             </PrivateRoute>
                         } 
                     />
-                    {/* Add other protected routes like /profile */}
+                    
+                    {/* 2. ADD THE MISSING PROFILE ROUTE HERE */}
+                    <Route 
+                        path="/profile" 
+                        element={
+                            <PrivateRoute>
+                                <ProfilePage />
+                            </PrivateRoute>
+                        } 
+                    />
+                    
                 </Routes>
             </main>
         </Router>
